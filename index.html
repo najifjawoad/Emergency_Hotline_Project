@@ -28,16 +28,16 @@
         </section>
         <section class="flex gap-5">
             <div class="bg-[#41ff6b1a] flex gap-1 justify-between items-center  h-14 w-[106px] rounded-[50px] p-8">
-                <span>0</span>
+                <span id="heart_count">0</span>
                 <img src="./assets/heart.png" alt="" class="w-[24px]">
             </div>
             <div class="bg-[#41ff6b1a] flex gap-1 justify-between items-center  h-14 w-[106px] rounded-[50px] p-8">
-                <span>10</span>
+                <span id="coin_count">100</span>
                 <img src="./assets/coin.png" alt="" class="w-[24px]">
             </div>
             <div
                 class="bg-[#00A63E] text-white flex gap-1 justify-between items-center  h-14 w-[106px] rounded-[50px] p-8">
-                <span>20</span>
+                <span id="copy_count">0</span>
                 <p>Copy</p>
             </div>
 
@@ -74,20 +74,21 @@
                         <div class="flex justify-center items-center w-[60px] h-[60px] bg-[#FFE3E2] rounded-2xl">
                             <img src="./assets/emergency.png" alt="" class="w-[32px]">
                         </div>
-                        <span><i class="fa-regular fa-heart"></i></span>
+                        <span id="heart_icon" class="common_heart"><i class="fa-regular fa-heart"></i></span>
                     </div>
-                    <h1 class="font-bold text-[24px] mt-4">National Emergency Number</h1>
+                    <h1 id="service_name" class="font-bold text-[24px] mt-4">National Emergency Number</h1>
                     <p class="text-[18px] text-gray-600 mb-6">National Emergency</p>
 
-                    <p class="font-bold text-[32px]">999</p>
+                    <p id="service_number" class="font-bold text-[32px]">999</p>
 
                     <div class="bg-[#F2F2F2] w-[53px] h-[37px] rounded-full  flex justify-center items-center mb-3">
                         <p>All</p>
                     </div>
                     <div class="flex gap-2 ">
-                        <button class="btn  w-1/2 text-gray-500">
+                        <button class="common_copy_btn copy_btn btn  w-1/2 text-gray-500 rounded-lg">
                             <i class="fa-regular fa-copy "></i>Copy</button>
-                        <button class="btn w-1/2 bg-green-500 text-white"><i class="fa-solid fa-phone"></i>Call
+
+                        <button id="call_btn" class="common_call_btn btn w-1/2 bg-green-500 text-white rounded-lg"><i class="fa-solid fa-phone"></i>Call
                         </button>
 
                     </div>
@@ -318,27 +319,17 @@
                 <div class=" flex justify-between  ">
                     <p> <i class="fa-regular fa-clock"></i> Call History </p>
 
-                    <button class="btn  bg-green-500 text-white rounded-[50px]">Clear
+                    <button id="clr_btn" class="btn  bg-green-500 text-white rounded-[50px]">Clear
                     </button>
 
 
                 </div>
-                <section id="history_container " class="flex flex-col gap-3 mt-5">
+                <section id="history_container" class="flex flex-col gap-3 mt-5">
 
-                    <div class="flex justify-between bg-gray-50 p-3 rounded-lg">
-                        <div>
-                            <h1 class="font-bold">Fire Service Number</h1>
-                            <p>999</p>
-                        </div>
-                        <p>time</p>
-                    </div>
-                    <div class="flex justify-between bg-gray-50 p-3 rounded-lg">
-                        <div>
-                            <h1 class="font-bold">Fire Service Number</h1>
-                            <p>999</p>
-                        </div>
-                        <p>time</p>
-                    </div>
+                    
+
+                    
+                   
 
 
 
