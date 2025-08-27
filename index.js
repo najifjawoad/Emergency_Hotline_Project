@@ -3,21 +3,18 @@ function getId(id) {
 
 
 }
+// for call button functionality
+getId('card_section').addEventListener('click', function (e)
+{
+     if(e.target.className.includes('common_call_btn'))
+     {   
+        const call_btn = e.target;
+        
+         const service_name = call_btn.parentNode.parentNode.children[1].innerText;
+         
+         const service_number  = call_btn.parentNode.parentNode.children[3].innerText;
+         console.log(service_number);
 
-
-document.getElementById('heart_icon')
-    .addEventListener('click', function () {
-        const heart_count = Number(getId('heart_count').innerText);
-
-        const new_heart_count = heart_count + 1;
-        getId('heart_count').innerText = new_heart_count;
-        console.log(new_heart_count)
-    })
-
-document.getElementById('call_btn')
-    .addEventListener('click', function () {
-        const service_name = getId('service_name').innerText;
-        const service_number = getId('service_number').innerText;
         const coin_count = Number(getId('coin_count').innerText);
         const time = new Date().toLocaleTimeString(); 
         if (coin_count < 20) {
@@ -40,6 +37,28 @@ document.getElementById('call_btn')
     `
     const history_container = getId('history_container');
       history_container.appendChild(new_div);
+     }
+    
+})
+
+// for heart functionality
+getId('card_section').addEventListener('click', function (e)
+{
+    if(e.target.className.includes('common_heart'))
+    {
+        const heart_count = Number(getId('heart_count').innerText);
+
+        const new_heart_count = heart_count + 1;
+        getId('heart_count').innerText = new_heart_count;
+        console.log(new_heart_count)
+    }
+})
+
+
+
+document.getElementById('call_btn')
+    .addEventListener('click', function () {
+        
     })
   
 
